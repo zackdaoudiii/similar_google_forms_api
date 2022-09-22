@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "d891dc74-897e-4929-862b-5028050ae2c8",
+		"name": "GOOGLE FORM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14675690"
+	},
+	"item": [
+		{
+			"name": "Survey",
+			"item": [
+				{
+					"name": "UserAnwser",
+					"item": [
+						{
+							"name": "Save Answer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "q",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9096/api/usersAnwers/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9096",
+									"path": [
+										"api",
+										"usersAnwers",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete all",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9096/api/usersAnwers/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9096",
+									"path": [
+										"api",
+										"usersAnwers",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "saveAllAnswers",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"id\" : null,\r\n        \"content\" : \"need to implements secrurity layer \",\r\n        \"idSurvey\" :  2,\r\n        \"idSection\" : 4,\r\n        \"idQuestion\" : 12,\r\n        \"userId\": 1\r\n    },\r\n    {\r\n        \"id\" : null,\r\n        \"content\" : \"5\",\r\n        \"idSurvey\" :  2,\r\n        \"idSection\" : 3,\r\n        \"idQuestion\" : 10,\r\n        \"userId\": 1\r\n    },\r\n    {\r\n        \"id\" : null,\r\n        \"content\" : \"Java: Senior / .net : junior / Experties :  confirmed \",\r\n        \"idSurvey\" :  2,\r\n        \"idSection\" : 3,\r\n        \"idQuestion\" : 11,\r\n        \"userId\": 1\r\n    },\r\n    {\r\n        \"id\" : null,\r\n        \"content\" : \"java java feature java version\",\r\n        \"idSurvey\" :  2,\r\n        \"idSection\" : 3,\r\n        \"idQuestion\" : 7,\r\n        \"userId\": 1\r\n    },\r\n    {\r\n        \"id\" : null,\r\n        \"content\" : \"What do you understand by Java virtual machine si bla bla bla bla bla bla bla blaaa blaaa\",\r\n        \"idSurvey\" :  2,\r\n        \"idSection\" : 3,\r\n        \"idQuestion\" : 8,\r\n        \"userId\": 1\r\n    },\r\n    {\r\n        \"id\" : null,\r\n        \"content\" : \"Lisible\",\r\n        \"idSurvey\" :  2,\r\n        \"idSection\" : 3,\r\n        \"idQuestion\" : 9,\r\n        \"userId\": 1\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9096/api/usersAnwers/saveall",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9096",
+									"path": [
+										"api",
+										"usersAnwers",
+										"saveall"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "find survey",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9096/api/survey/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9096",
+							"path": [
+								"api",
+								"survey",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save survey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":null,\r\n    \"surveyTitle\":\"Exam N0000001.\",\r\n    \"surveySubTitle\":\"First Sem1\",\r\n    \"placeHolder\":\"\",\r\n    \"instruction\":\"\",\r\n    \"createdBy\":\"pr.Zakaria daoudi\",\r\n    \"isArchiveFlag\":false,\r\n    \"archiveDate\":null,\r\n    \"sectionList\":[\r\n        {\r\n            \"id\": null,\r\n            \"sectionTitle\": \"Java\",\r\n            \"questionList\" : [ \r\n                {\r\n                    \"id\":null,\r\n                    \"questionType\":\"SHORT_QUESTION\",\r\n                    \"isRequired\" :true,\r\n                    \"question\":\"List the features of Java Programming language you know ?\",\r\n                    \"options\": null,\r\n                    \"questionImage\":null\r\n                },\r\n                {\r\n                    \"id\":null,\r\n                    \"questionType\":\"PARAGRAPH_QUESTION\",\r\n                    \"isRequired\" :true,\r\n                    \"question\":\"What do you understand by Java virtual machine?\",\r\n                    \"options\": null,\r\n                    \"questionImage\":null\r\n                },\r\n                {\r\n                    \"id\":null,\r\n                    \"questionType\":\"MULTIPLE_CHOICE_QUESTION\",\r\n                    \"isRequired\" :true,\r\n                    \"question\":\" What are the various access specifiers not in Java?\",\r\n                    \"options\": [\"Public\",\"Protected\",\"Default\",\"Private\",\"Lisible\"],\r\n                    \"questionImage\":null\r\n                },\r\n                {\r\n                    \"id\":null,\r\n                    \"questionType\":\"LINEAR_SCALE_QUESTIONS\",\r\n                    \"isRequired\" :true,\r\n                    \"question\":\"Number years of experties ?\",\r\n                    \"options\": null,\r\n                    \"linearScaleDto\":  {\r\n                        \"label1\":\"From\",\r\n                        \"from\":1,\r\n                        \"label2\":\"To\",\r\n                        \"to\":10\r\n                    },\r\n                    \"questionImage\":null\r\n                },\r\n                {\r\n                    \"id\":null,\r\n                    \"questionType\":\"CHECKBOXE_GRID_QUESTIONS\",\r\n                    \"isRequired\" :true,\r\n                    \"question\":\"Tell us your experties  ?\",\r\n                    \"options\":null,\r\n                    \"multipleANDCheckBoxeChoiceGridDto\":{\r\n                        \"rows\" : [ \r\n                               {\"id\":1 ,\"row\":\"Experties\"},\r\n                               {\"id\":2 ,\"row\":\"Java\"},\r\n                               {\"id\":3 ,\"row\":\".Net\"}\r\n                           ],\r\n                        \"columns\" :\r\n                        [\r\n                           {\"id\":1 ,\"column\":\"Junior\"},\r\n                           {\"id\":2 ,\"column\":\"Confirmed\"},\r\n                           {\"id\":3 ,\"column\": \"Senior\"}\r\n                       ]\r\n                    },\r\n                   \"questionImage\":null\r\n                }\r\n             ] \r\n        },\r\n        {\r\n            \"id\": null,\r\n            \"sectionTitle\": \"C#\",\r\n            \"questionList\":[\r\n                {\r\n                        \"id\":null,\r\n                        \"questionType\":\"SHORT_QUESTION\",\r\n                        \"isRequired\" :true,\r\n                        \"question\":\"What do you think about this Architect?\",\r\n                        \"options\": null,\r\n                        \"questionImage\":null\r\n                }\r\n            ]\r\n        }\r\n    ] \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9096/api/survey/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9096",
+							"path": [
+								"api",
+								"survey",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9096/api/survey/60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9096",
+							"path": [
+								"api",
+								"survey",
+								"60"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete all survey",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9096/api/survey/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9096",
+							"path": [
+								"api",
+								"survey",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find survey by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9096/api/survey/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9096",
+							"path": [
+								"api",
+								"survey",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UploadFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9096/api/files/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9096",
+					"path": [
+						"api",
+						"files",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
